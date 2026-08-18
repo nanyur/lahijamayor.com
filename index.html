@@ -3,13 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Hija Mayor — Palenques, Conciertos y Eventos</title>
-<meta name="description" content="Calendario de eventos y directorio de músicos de regional mexicano.">
+<title>La Hija Mayor — Palenques, Conciertos y Eventos de Regional Mexicano</title>
+<meta name="description" content="Calendario de palenques, conciertos y eventos de regional mexicano, más un directorio de músicos y bandas verificados para contratar sin riesgo.">
+<link rel="canonical" href="https://lahijamayor.com/">
+
+<!-- Open Graph (como se ve al compartir en Facebook, WhatsApp, Instagram) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lahijamayor.com/">
+<meta property="og:title" content="La Hija Mayor — Palenques, Conciertos y Eventos de Regional Mexicano">
+<meta property="og:description" content="Calendario de palenques, conciertos y eventos de regional mexicano, más un directorio de músicos y bandas verificados para contratar sin riesgo.">
+<meta property="og:image" content="https://lahijamayor.com/assets/og-cover.jpg">
+<meta property="og:locale" content="es_MX">
+
+<!-- Twitter / X card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La Hija Mayor — Palenques, Conciertos y Eventos">
+<meta name="twitter:description" content="Calendario de palenques, conciertos y eventos de regional mexicano, más un directorio de músicos verificados.">
+<meta name="twitter:image" content="https://lahijamayor.com/assets/og-cover.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta name="theme-color" content="#0D0D0D">
+
+<!-- Datos estructurados para Google (ayuda a que aparezca mejor en resultados) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "La Hija Mayor",
+  "url": "https://lahijamayor.com/",
+  "sameAs": ["https://instagram.com/LaHijaMayor"],
+  "description": "Calendario de palenques, conciertos y eventos de regional mexicano, más un directorio de músicos y bandas."
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bevan&family=Bitter:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <link rel="stylesheet" href="css/style.css">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7049956033083780" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -28,6 +61,13 @@
 </header>
 
 <section id="inicio" class="hero">
+  <div class="hero-slider" id="hero-slider" aria-label="Fotos destacadas">
+    <div class="hero-slide is-active" style="background-image:url('assets/slider/1.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/slider/2.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/slider/3.jpg')"></div>
+    <div class="hero-slider-overlay"></div>
+    <div class="hero-dots" id="hero-dots"></div>
+  </div>
   <div class="wrap hero-inner">
     <div class="stamp" aria-hidden="true">
       <svg viewBox="0 0 200 200" class="stamp-svg">
@@ -56,10 +96,30 @@
     </div>
     <div class="about-copy">
       <p class="eyebrow">Sobre mí</p>
-      <p id="about-text">Crecí entre corridos, bandas y la emoción de un buen palenque — y con los años me convertí en el puente entre los artistas y la gente que quiere vivir esa música en vivo. La Hija Mayor es mi forma de organizar todo eso en un solo lugar: eventos confiables y un directorio de músicos reales, para que contratar o ir a un show nunca sea un dolor de cabeza. <code>js/app.js</code>, dentro de <code>ABOUT_TEXT</code>.</p>
+      <p id="about-text">Aquí va tu historia: quién es La Hija Mayor, desde cuándo organizas o conectas al público con el regional mexicano, y qué hace diferente a este espacio. Edita este texto en <code>js/app.js</code>, dentro de <code>ABOUT_TEXT</code>.</p>
+
+      <div class="about-ctas">
+        <a href="https://instagram.com/LaHijaMayor" target="_blank" rel="noopener" class="btn btn-pink">
+          Colaboremos — escríbeme a Instagram
+        </a>
+        <a href="https://instagram.com/LaHijaMayor" target="_blank" rel="noopener" class="btn btn-outline">
+          ¿Eres músico? Súmate al directorio
+        </a>
+      </div>
     </div>
   </div>
 </section>
+
+<div class="ad-slot wrap">
+  <span class="ad-label">Publicidad</span>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7049956033083780"
+       data-ad-slot="TU_SLOT_1"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
 <section id="eventos" class="section">
   <div class="wrap">
@@ -84,6 +144,17 @@
     <div id="events-map" class="map" hidden></div>
   </div>
 </section>
+
+<div class="ad-slot wrap">
+  <span class="ad-label">Publicidad</span>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7049956033083780"
+       data-ad-slot="TU_SLOT_2"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
 <section id="musicos" class="section section-alt">
   <div class="wrap">
