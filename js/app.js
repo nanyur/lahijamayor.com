@@ -70,10 +70,12 @@ function formatFechaCorta(date) {
   return `${String(date.getDate()).padStart(2,"0")} ${meses[date.getMonth()]}`;
 }
 
+const WHATSAPP_MENSAJE = "Hola! Encontré tu contacto en el sitio de La Hija Mayor..";
+
 function whatsappLink(numero) {
   const limpio = numero.replace(/\D/g, "");
   if (!limpio) return null;
-  return `https://wa.me/52${limpio.length === 10 ? limpio : limpio.slice(-10)}`;
+  return `https://wa.me/52${limpio.length === 10 ? limpio : limpio.slice(-10)}?text=${encodeURIComponent(WHATSAPP_MENSAJE)}`;
 }
 
 // ============================================================

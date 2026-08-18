@@ -6,7 +6,7 @@
   --pink-dim: #B79AA6;
   --text: #F5E6EC;
   --text-dim: #6B5860;
-  --font-display: 'Bevan', serif;
+  --font-display: 'Montserrat', sans-serif;
   --font-body: 'Bitter', serif;
   --radius: 8px;
 }
@@ -235,6 +235,16 @@ a { color: inherit; }
 .map { height: 380px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
 .leaflet-popup-content-wrapper { background: var(--bg-card); color: var(--text); }
 .leaflet-popup-tip { background: var(--bg-card); }
+
+.brand-word,
+.hero h1,
+.eyebrow,
+.section-title,
+.event-name,
+.event-date,
+.musico-card h3 {
+  font-weight: 700;
+}
 
 /* Footer */
 .site-footer {
