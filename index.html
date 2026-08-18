@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Hija Mayor — Palenques, Conciertos y Eventos</title>
+<meta name="description" content="Calendario de eventos y directorio de músicos de regional mexicano.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bevan&family=Bitter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#inicio" class="brand">
+      <img src="assets/logo.png" alt="La Hija Mayor" class="brand-logo" onerror="this.style.display='none'">
+      <span class="brand-word">LA HIJA MAYOR</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#eventos">Eventos</a>
+      <a href="#musicos">Músicos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+    </nav>
+  </div>
+</header>
+
+<section id="inicio" class="hero">
+  <div class="wrap hero-inner">
+    <div class="stamp" aria-hidden="true">
+      <svg viewBox="0 0 200 200" class="stamp-svg">
+        <defs>
+          <path id="stampCircleTop" d="M 20,100 A 80,80 0 0 1 180,100" />
+          <path id="stampCircleBottom" d="M 180,100 A 80,80 0 0 1 20,100" />
+        </defs>
+        <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <text font-size="15" letter-spacing="3" fill="currentColor">
+          <textPath href="#stampCircleTop" startOffset="50%" text-anchor="middle">ÉCHELE COMPA</textPath>
+        </text>
+        <text font-size="15" letter-spacing="3" fill="currentColor">
+          <textPath href="#stampCircleBottom" startOffset="50%" text-anchor="middle">LA HIJA MAYOR</textPath>
+        </text>
+      </svg>
+    </div>
+    <h1>LA HIJA MAYOR</h1>
+    <p class="hero-tag">Palenques · Conciertos · Eventos — Regional Mexicano</p>
+  </div>
+</section>
+
+<section id="sobre-mi" class="about">
+  <div class="wrap about-inner">
+    <div class="about-photo">
+      <img src="assets/sobre-mi.jpg" alt="La Hija Mayor" onerror="this.parentElement.classList.add('no-photo')">
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow">Sobre mí</p>
+      <p id="about-text">Aquí va tu historia: quién es La Hija Mayor, desde cuándo organizas o conectas al público con el regional mexicano, y qué hace diferente a este espacio. Edita este texto en <code>js/app.js</code>, dentro de <code>ABOUT_TEXT</code>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="eventos" class="section">
+  <div class="wrap">
+    <h2 class="section-title">Eventos</h2>
+
+    <div class="controls">
+      <input type="search" id="event-search" placeholder="Buscar evento o ciudad" aria-label="Buscar evento">
+      <div class="chips" id="category-chips" role="tablist" aria-label="Filtrar por categoría">
+        <button class="chip is-active" data-cat="todos">Todos</button>
+        <button class="chip" data-cat="Palenque">Palenques</button>
+        <button class="chip" data-cat="Concierto">Conciertos</button>
+        <button class="chip" data-cat="Evento">Eventos</button>
+      </div>
+      <div class="view-toggle" role="tablist" aria-label="Vista de eventos">
+        <button class="view-btn is-active" data-view="lista">Lista</button>
+        <button class="view-btn" data-view="mapa">Mapa</button>
+      </div>
+    </div>
+
+    <div id="events-status" class="status-msg" hidden></div>
+    <div id="events-list" class="cards"></div>
+    <div id="events-map" class="map" hidden></div>
+  </div>
+</section>
+
+<section id="musicos" class="section section-alt">
+  <div class="wrap">
+    <h2 class="section-title">Directorio de músicos</h2>
+    <div class="controls">
+      <input type="search" id="musico-search" placeholder="Buscar músico, banda o género" aria-label="Buscar músico">
+    </div>
+    <div id="musicos-status" class="status-msg" hidden></div>
+    <div id="musicos-list" class="cards"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>La Hija Mayor — Regional Mexicano</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
